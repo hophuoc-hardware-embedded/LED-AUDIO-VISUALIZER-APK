@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1F1F1F"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="@string/bluetooth_icon_description"
+                android:src="@drawable/bluetooth"
+                app:tint="@color/white" />
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/status_not_connected"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            <Button
+                android:id="@+id/buttonConnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:text="@string/connect" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textViewEffectTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/effect_title"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonRecalibrate"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recalibrate"
+                    android:textColor="@color/white"
+                    app:strokeColor="#FF0080"
+                    app:strokeWidth="2dp"
+                    app:cornerRadius="8dp"
+                    app:icon="@android:drawable/ic_menu_rotate"
+                    app:iconTint="#FF0080"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:minWidth="0dp"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/effectsGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="2"
+                android:padding="8dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/buttonEffect1"
+                    style="@style/EffectCard"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <LinearLayout style="@style/EffectButtonLayout">
+                        <ImageView
+                            style="@style/EffectIcon"
+                            android:src="@drawable/barchart"
+                            android:contentDescription="@string/desc_icon_vu_meter"/>
+                        <TextView
+                            style="@style/EffectText"
+                            android:text="@string/effect_vu_meter" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/buttonEffect2"
+                    style="@style/EffectCard"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <LinearLayout style="@style/EffectButtonLayout">
+                        <ImageView
+                            style="@style/EffectIcon"
+                            android:src="@drawable/wave"
+                            android:contentDescription="@string/desc_icon_music_wave"/>
+                        <TextView
+                            style="@style/EffectText"
+                            android:text="@string/effect_music_wave" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/buttonEffect3"
+                    style="@style/EffectCard"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <LinearLayout style="@style/EffectButtonLayout">
+                        <ImageView
+                            style="@style/EffectIcon"
+                            android:src="@drawable/electrocardiogram"
+                            android:contentDescription="@string/desc_icon_pulse"/>
+                        <TextView
+                            style="@style/EffectText"
+                            android:text="@string/effect_pulse" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/buttonEffect4"
+                    style="@style/EffectCard"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <LinearLayout style="@style/EffectButtonLayout">
+                        <ImageView
+                            style="@style/EffectIcon"
+                            android:src="@drawable/thermostat"
+                            android:contentDescription="@string/desc_icon_color_temp"/>
+                        <TextView
+                            style="@style/EffectText"
+                            android:text="@string/effect_color_temp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </GridLayout>
+
+            <!-- LED VISUALIZER - UI MỚI -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1A1A1A"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:elevation="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/led_visualizer_title"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"/>
+
+                <!-- Khung đen bao quanh LED như LED thật -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="12dp">
+
+                    <com.example.ledfxcontroller.LEDVisualizerView
+                        android:id="@+id/ledVisualizerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        tools:ignore="RtlSymmetry"/>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/led_visualizer_subtitle"
+                    android:textColor="#888888"
+                    android:textSize="11sp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/beatTriggerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/manual_trigger_title"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/buttonBeatTrigger"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/beat_trigger_button"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

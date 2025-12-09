@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.LEDFXController" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <!--
+    ================================================================
+    == CÁC STYLE TÙY CHỈNH CHO GIAO DIỆN CÁC NÚT BẤM HIỆU ỨNG     ==
+    ================================================================
+    -->
+
+    <!-- Style cho cái thẻ bao bọc nút bấm -->
+    <style name="EffectCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="cardBackgroundColor">#E0E0E0</item> <!-- Màu nền cho chế độ sáng -->
+        <item name="cardCornerRadius">12dp</item>
+    </style>
+
+    <!-- Style cho layout chứa icon và chữ bên trong nút -->
+    <style name="EffectButtonLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Style để quy định kích thước cố định cho icon -->
+    <style name="EffectIcon">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
+    <!-- Style cho phần chữ mô tả hiệu ứng -->
+    <style name="EffectText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">@color/black</item> <!-- Màu chữ cho chế độ sáng -->
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
+

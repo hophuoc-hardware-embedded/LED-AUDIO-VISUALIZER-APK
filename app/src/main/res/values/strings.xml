@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">LEDFXController</string>
+    <string name="connect">Kết Nối</string>
+    <string name="disconnect">Ngắt Kết Nối</string>
+    <string name="status_not_connected">Chưa kết nối</string>
+    <string name="effect_title">Hiệu Ứng</string>
+    <string name="recalibrate">🎯 Hiệu Chỉnh</string>
+    <string name="recalibrate_success">Đã gửi lệnh hiệu chỉnh</string>
+    <string name="recalibrate_instruction">Hệ thống sẽ tự động đo môi trường trong 2 giây...</string>
+    <string name="bluetooth_icon_description">Biểu tượng trạng thái Bluetooth</string>
+
+    <!-- Status Messages -->
+    <string name="status_connecting_to">Đang kết nối đến %1$s…</string>
+    <string name="status_connected_to">Đã kết nối: %1$s</string>
+
+    <!-- Toast Messages -->
+    <string name="bluetooth_unavailable">Bluetooth không khả dụng</string>
+    <string name="bluetooth_permission_required">Cần cấp quyền Bluetooth</string>
+    <string name="please_enable_bluetooth">Vui lòng bật Bluetooth</string>
+    <string name="no_paired_devices">Không có thiết bị đã ghép đôi</string>
+    <string name="select_device">Chọn thiết bị</string>
+    <string name="connection_success">Kết nối thành công</string>
+    <string name="connection_failed">Kết nối thất bại</string>
+    <string name="not_connected">Chưa kết nối</string>
+    <string name="command_send_error">Lỗi gửi lệnh</string>
+
+    <!-- Effect Names -->
+    <string name="effect_vu_meter">VU Meter</string>
+    <string name="effect_music_wave">Sóng Nhạc</string>
+    <string name="effect_pulse">Xung Nhịp</string>
+    <string name="effect_color_temp">Nhiệt Độ Màu</string>
+    <string name="sensitivity_label">Độ Nhạy</string>
+
+    <!-- LED Visualizer -->
+    <string name="led_visualizer_title">🔆 LED Visualizer</string>
+    <string name="led_visualizer_subtitle">60 LEDs • Real-time Sync</string>
+    <string name="manual_trigger_title">Kích hoạt thủ công</string>
+    <string name="beat_trigger_button">Bắn Beat</string>
+
+    <!-- Content Descriptions for Accessibility -->
+    <string name="desc_icon_vu_meter">Biểu tượng hiệu ứng VU Meter</string>
+    <string name="desc_icon_music_wave">Biểu tượng hiệu ứng Sóng Nhạc</string>
+    <string name="desc_icon_pulse">Biểu tượng hiệu ứng Xung Nhịp</string>
+    <string name="desc_icon_color_temp">Biểu tượng hiệu ứng Nhiệt Độ Màu</string>
+</resources>
