@@ -23,5 +23,7 @@ This repository contains the source code for a Native Android application design
   * `LEDVisualizerView.kt` - Custom rendering engine for the virtual LED strip[cite: 6].
 * `/app/src/main/res/` - Layout XMLs, drawables, and UI resources[cite: 3].
 
+Demo link 
+https://drive.google.com/file/d/10tn8bVEcqwVPmf9QI0IvC2CE0BbwYoNW/view?usp=drive_link
 ---
 *Developed by Ho Ngoc Thien Phuoc.*
